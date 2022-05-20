@@ -1,0 +1,17 @@
+<h1>Works correctly</h1>
+
+<table>
+  <th>Id</th>
+  <th>FirstName</th>
+  <th>LastName</th>
+  <tr *ngFor ="let client of List" >
+    <td>{{client.id}}</td>
+    <td>{{client.firstname}}</td>
+    <td>{{client.lastname}}</td>
+    <td><button type="button" class="btn btn-primary" [routerLink] = "['/edit',client.id]">Edit</button> | <button type="button" class="btn btn-primary" [routerLink] = "['/delete',client.id]">Delete</button></td>
+  </tr>
+</table>
+
+<!-- <div *ngIf = "msg">
+  <h1>hello</h1>
+</div> -->

@@ -7,6 +7,14 @@ import { HighlightDirective } from './highlight.directive';
 import { FormsModule } from '@angular/forms';
 import { LoansComponent } from './loans/loans.component';
 import { LoansTypesComponent } from './loans-types/loans-types.component';
+import { AddLoansComponent } from './add-loans/add-loans.component';
+import { EditLoansComponent } from './edit-loans/edit-loans.component';
+import { DeleteLoansComponent } from './delete-loans/delete-loans.component';
+import { ProductsComponent } from './products/products.component';
+import { HomeComponent } from './home/home.component';
+import { ClientComponent } from './client/client.component';
+import { SearchComponent } from './search/search.component';
+import { ErrorComponent } from './error/error.component';
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
@@ -15,6 +23,14 @@ import { LoansTypesComponent } from './loans-types/loans-types.component';
     HighlightDirective,
     LoansComponent,
     LoansTypesComponent,
+    AddLoansComponent,
+    EditLoansComponent,
+    DeleteLoansComponent,
+    ProductsComponent,
+    HomeComponent,
+    ClientComponent,
+    SearchComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
