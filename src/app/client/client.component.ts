@@ -16,7 +16,7 @@ export class ClientComponent implements OnInit {
 
   msg = true
 
-
+  isTrue = true
   constructor() { }
 
   ngOnInit(): void {
