@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-client',
@@ -13,9 +15,21 @@ export class ClientComponent implements OnInit {
     {firstname:"harry", lastname:"shrivastva", id:25},
     {firstname:"Raj", lastname:"pathak", id:26},
   ]
-
+  firstname:string=''
   msg = true
+  clientType:string=''
 
+  updatedUsers(event){
+    console.log(event)
+  }
+
+  client(Form:NgForm){
+    console.log(Form.value)
+  }
+
+  resetform(form:NgForm){
+    form.reset()
+  }
   isTrue = true
   constructor() { }
 

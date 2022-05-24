@@ -1,2 +1,31 @@
-<p>edit-loans works!</p>
-<h1>Item to be edited id {{editid}}</h1>
+
+
+
+
+
+
+<h1>Item to be edited id {{editid}} Owner : {{ Name }} Type : {{ Type }}</h1>
+<form [formGroup]="editLoan">
+  <div class="form-group">
+    <label>
+      Loan Name
+    </label>    
+    <input type="text" formControlName="loadName">
+    <div class='text-danger' *ngIf="editLoan.get('loadName').hasError('required') && editLoan.get('loadName').touched ">Loan Name is req</div>
+    <div class='text-danger' *ngIf="editLoan.get('loadName').hasError('minlength') && editLoan.get('loadName').touched ">Loan min length</div>
+    <div class='text-danger' *ngIf="editLoan.get('loadName').hasError('maxlength') && editLoan.get('loadName').touched ">Loan max length</div>
+  </div>
+  <div>
+    <label>
+      textarea
+    </label>
+    <textarea formControlName="loadDescription" required></textarea>
+  </div>
+  <div>
+    <button (click)="editted()" [disabled]="editLoan.invalid">Edit Loan</button>
+    <button (click)="resetform()">Reset Loan</button>
+  </div>
+  
+</form>
+
+<button (click)="updated()">Update Successfully</button>

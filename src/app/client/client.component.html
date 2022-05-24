@@ -1,3 +1,9 @@
+
+
+
+<app-edit-loans  [Name]="'Manav'" [Type]="'VIP'" (updatedList)="updatedUsers($event)" ></app-edit-loans>
+
+
 <h1>Works correctly</h1>
 <button type="button" class="btn btn-secondary" [routerLink] = "'/search'">Click me </button>
 <table>
@@ -12,6 +18,23 @@
   </tr>
 </table>
 
+
+<form #clientform="ngForm" (submit)="client(clientform)">
+  <input type="text" [(ngModel)]="firstname" name="firstname" required>
+  <br/>
+  <select [(ngModel)]="clientType" name="clientType">
+    <option value ="Premium">Premium</option>
+    <option value ="Optional">Optional</option>
+  </select>
+  <br/>
+  <button type="submit" [disabled]= "!clientform.valid">Add client</button>
+  <button  (click)="resetform(clientform)">reset Form</button>
+</form>
+<br/>
+
+<div>
+  {{firstname}}
+</div>
 <!-- <div *ngIf = "msg">
   <h1>hello</h1>
 </div> -->
