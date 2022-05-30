@@ -1,0 +1,10 @@
+<p>content works!</p>
+
+<!-- single ng-content -->
+<ng-content></ng-content>
+<!-- multiple ng-content -->
+<ng-content select = "[role]"></ng-content>
+<!-- template ng-content -->
+<div *ngIf="adminTemplate">
+  <template [ngTemplateOutlet]="adminTemplate"></template>
+</div>

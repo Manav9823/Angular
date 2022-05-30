@@ -1,11 +1,31 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { ContentComponent } from './content/content.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit{
+
+  names = [
+    {
+      state:'Mumbai',
+      code : 23,
+      language:'Marathi'
+    },
+    {
+      state:'Punjab',
+      code : 24,
+      language:'Punjabi'
+    },
+    {
+      state:'Delhi',
+      code : 25,
+      language:'Punjabi'
+    },
+  ]
+
   title      = 'angular'
   msg        = true
   arr        = ["manav", "harry", "tanveer", "divanshu", "deepak", "gurpartap"] 
@@ -26,4 +46,15 @@ export class AppComponent {
   mouseHover(name:string){
     console.log(` ${name} Hovered over me...`)
   }
+  @ViewChild('header')
+  heading:ElementRef
+
+  @ViewChild(ContentComponent)
+  contentChild:ContentComponent
+
+  ngAfterViewInit(): void {
+    // console.log(this.heading.nativeElement.innerHTML)
+    // console.log(this.contentChild.istrue)
+  }
+
 }

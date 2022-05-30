@@ -1,10 +1,10 @@
 
 
 
-<app-edit-loans  [Name]="'Manav'" [Type]="'VIP'" (updatedList)="updatedUsers($event)" ></app-edit-loans>
+<!-- <app-edit-loans  [Name]="'Manav'" [Type]="'VIP'" (updatedList)="updatedUsers($event)" ></app-edit-loans> -->
 
 
-<h1>Works correctly</h1>
+<!-- <h1>Works correctly</h1>
 <button type="button" class="btn btn-secondary" [routerLink] = "'/search'">Click me </button>
 <table>
   <th>Id</th>
@@ -16,9 +16,9 @@
     <td>{{client.lastname}}</td>
     <td><button type="button" class="btn btn-primary" [routerLink] = "['/edit',client.id]">Edit</button> | <button type="button" class="btn btn-primary" [routerLink] = "['/delete',client.id]">Delete</button></td>
   </tr>
-</table>
+</table> -->
 
-
+ <!-- template form -->
 <form #clientform="ngForm" (submit)="client(clientform)">
   <input type="text" [(ngModel)]="firstname" name="firstname" required>
   <br/>
@@ -32,9 +32,19 @@
 </form>
 <br/>
 
-<div>
+<!-- <ul *ngFor = "let user of users"></ul> -->
+
+<!-- <ng-container *ngIf="isTrue">
+  <div *ngIf="msg">
+    this is a div
+  </div>
+</ng-container>
+<ng-container>
+  This is a container div
+</ng-container> -->
+<!-- <div>
   {{firstname}}
-</div>
+</div> -->
 <!-- <div *ngIf = "msg">
   <h1>hello</h1>
 </div> -->

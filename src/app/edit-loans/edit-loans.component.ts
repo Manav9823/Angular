@@ -57,9 +57,9 @@ export class EditLoansComponent implements OnInit {
       'loadName':'My loan',
       'loadDescription':'this is my loan'
     }
-    // this.editLoan.valueChanges.subscribe(data =>{
-    //   console.log(data)
-    // })
+    this.editLoan.valueChanges.subscribe(data =>{
+      console.log(data)
+    })
     this.editLoan.statusChanges.subscribe(data=>{
       console.log(data)
     })

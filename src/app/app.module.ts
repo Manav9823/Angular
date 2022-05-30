@@ -15,6 +15,12 @@ import { HomeComponent } from './home/home.component';
 import { ClientComponent } from './client/client.component';
 import { SearchComponent } from './search/search.component';
 import { ErrorComponent } from './error/error.component';
+import {HttpClientModule} from '@angular/common/http'
+import { UsersModule } from './users/users.module'
+import { LayoutModule } from './layout/layout.module';
+import { ContentComponent } from './content/content.component';
+import { HighlightPipe } from './highlight.pipe'
+
 // import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
@@ -31,8 +37,13 @@ import { ErrorComponent } from './error/error.component';
     ClientComponent,
     SearchComponent,
     ErrorComponent,
+    ContentComponent,
+    HighlightPipe,
   ],
   imports: [
+    LayoutModule,
+    UsersModule,
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

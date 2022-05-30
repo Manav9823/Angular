@@ -13,6 +13,8 @@ import { LoansComponent } from './loans/loans.component';
 import { Permission2Guard } from './permission2.guard';
 import { ProductsComponent } from './products/products.component';
 import { SearchComponent } from './search/search.component';
+import { EditUserComponent } from './users/edit-user/edit-user.component';
+import { ViewUserComponent } from './users/view-user/view-user.component';
 
 const routes: Routes = [
   {
@@ -35,6 +37,14 @@ const routes: Routes = [
   {
     path:'loans-types',
     component:LoansTypesComponent,
+  },
+  {
+    path:'edituser',
+    component:EditUserComponent
+  },
+  {
+    path:'viewuser',
+    component:ViewUserComponent
   },
   {
     path:'add-new-loans',
