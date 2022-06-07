@@ -77,10 +77,10 @@ const routes: Routes = [
     loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule),
     canLoad:[Lazzy2Guard]
   },
-  // {
-  //   path:'**',
-  //   component:ErrorComponent
-  // }
+  {
+    path:'**',
+    component:ErrorComponent
+  }
 
 ];
 

@@ -11,26 +11,37 @@
   {{name}}
 </div>
 
+
+// property binding
 <div *ngIf="msg" >
   <div [innerHTML] = "object.firstname"></div>
 </div>
 
+// event binding 
 <button (click) = "sayHello('manav')">Click me to say Hello </button>
 <div (mouseover) = "mouseHover('manav')">On mouse Hover...</div>
+
+// two way data binding
 <input [(ngModel)]="username"/>
 <div>{{username}}</div>
+
+// pipes 
 <div> {{ lowercaseexample | lowercase }} </div>
 <div> {{ uppercaseexample | uppercase }} </div>
 <div> {{ dateexample | date }} </div>
 <div> {{ jsonexample | json }} </div>
 <div> {{ currencyexample | currency }} </div>
 
+
+// ng-class directive
  <div [ngClass] = "'c1'">This is a ngClass</div>
 <div [ngClass] = "'c1 c2'">This is a ngClass with multiple classes</div>
 <div [ngClass] = "styleclass">This is a ngClass with dynamic class name</div>
 <div [ngClass] = "condition === 'c1' ? 'c1':'c2'">This is a ngClass with the conditional class name</div>
 
 
+
+// ng-template example
 <h1 class = "c1">Hello</h1>
 <div *ngIf = " msg; then updated; else error " ></div>
 
@@ -42,6 +53,7 @@
   Error while updating 
 </ng-template>
 
+// ng-For
 <h1>ngFor</h1>
 
 <ul>
@@ -70,6 +82,7 @@
   </li>
 </ul>
 
+// ng-switch
 <h1>ngSwitch</h1>
 
 <div [ngSwitch] ="Marvel">
@@ -90,7 +103,8 @@
 <!-- <div>
   <app-edit-loans></app-edit-loans>
 </div> -->
-
+<!-- <input [(ngModel)]="username"/> -->
+<!-- <div>{{username}}</div> -->
 <app-header></app-header>
 <!-- 
   Custom pipe example

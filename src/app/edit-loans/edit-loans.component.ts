@@ -43,14 +43,14 @@ export class EditLoansComponent implements OnInit {
 
     // creating using form builder
     this.editLoan = this.fb.group({
-      'loadName': new FormControl('',[
+      'loadName': [
         Validators.required,
         Validators.minLength(5),
         Validators.maxLength(15)
-      ]),
-      'loadDescription': new FormControl('',[
+      ],
+      'loadDescription':[
         Validators.minLength(5)
-      ]),
+      ]
     })
 
     const obj = {

@@ -10,12 +10,12 @@ import {ListuserService} from '../services/listuser.service'
 })
 export class ClientComponent implements OnInit {
 
-  // List = [
-  //   {firstname:"manav", lastname:"bansal", id:23},
-  //   {firstname:"Tom", lastname:"mehra", id:24},
-  //   {firstname:"harry", lastname:"shrivastva", id:25},
-  //   {firstname:"Raj", lastname:"pathak", id:26},
-  // ]
+  List = [
+    {firstname:"manav", lastname:"bansal", id:23},
+    {firstname:"Tom", lastname:"mehra", id:24},
+    {firstname:"harry", lastname:"shrivastva", id:25},
+    {firstname:"Raj", lastname:"pathak", id:26},
+  ]
   firstname:string=''
   msg = true
   clientType:string=''
